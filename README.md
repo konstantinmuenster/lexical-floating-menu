@@ -1,4 +1,4 @@
-# 🗯️ lexical-floating-menu
+# 🌬️ lexical-floating-menu
 
 #### Designed for `@lexical/react`. Headless & fully customizable.
 
@@ -10,7 +10,7 @@ Improve your text editing experience with an intuitive floating menu / bubble me
 
 ---
 
-<img alt="lexical floating menu" src="./screenshot.gif" width="480">
+<img alt="lexical floating menu" src="./screenshot.gif" width="640">
 
 ---
 
@@ -29,6 +29,7 @@ Note: Make sure you have all [peer dependencies](https://github.com/konstantinmu
 `lexical-floating-menu` exports a React component that can be included as a plugin within your `LexicalComposer`.
 
 ```tsx
+import { FloatingMenuPlugin } from "lexical-floating-menu";
 import { YourFloatingMenuUI } from "../components/FloatingMenu";
 
 <LexicalComposer>
