@@ -12,9 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "npm"
+          cache: "yarn"
 
-      - run: npm install
-      - run: npm run lint
-      - run: npm run check
-      - run: npm run build
+      - run: yarn
+      - run: yarn lint
+      - run: yarn check
+      - run: yarn build
