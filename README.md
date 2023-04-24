@@ -4,7 +4,7 @@
 
 Improve your text editing experience with an intuitive floating menu / bubble menu.
 
-📌 Live Demo: _tba_
+📌 Live Demo: [lexical-floating-menu.vercel.app](https://lexical-floating-menu.vercel.app/)
 
 📌 Blog Post: _tba_
 
