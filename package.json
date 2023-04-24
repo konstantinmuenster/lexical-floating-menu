@@ -1,0 +1,87 @@
+{
+  "name": "lexical-floating-menu",
+  "license": "MIT",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Konstantin Münster",
+    "email": "mail@konstantin.digital",
+    "url": "https://konstantin.digital"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konstantinmuenster/lexical-floating-menu"
+  },
+  "keywords": [
+    "lexical",
+    "floating menu",
+    "react",
+    "text editor",
+    "wysiwyg",
+    "bubble menu",
+    "rich text",
+    "javascript",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --dts",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write .",
+    "check": "tsc",
+    "release": "npm run check && npm run build && changeset publish",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.2.6"
+  },
+  "peerDependencies": {
+    "@lexical/react": ">=0.10",
+    "lexical": ">=0.10",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "@changesets/cli": "^2.26.0",
+    "@lexical/react": "^0.10.0",
+    "@storybook/addon-essentials": "^7.0.0-beta.33",
+    "@storybook/addon-interactions": "^7.0.0-beta.33",
+    "@storybook/addon-links": "^7.0.0-beta.33",
+    "@storybook/addon-styling": "^1.0.1",
+    "@storybook/blocks": "^7.0.0-beta.33",
+    "@storybook/react": "^7.0.0-beta.33",
+    "@storybook/react-vite": "^7.0.0-beta.33",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "classnames": "^2.3.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint": "^8.33.0",
+    "lexical": "^0.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.2.4",
+    "prettier": "^2.8.4",
+    "storybook": "^7.0.0-beta.33",
+    "tailwindcss": "^3.3.1",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vitest": "^0.28.4"
+  }
+}
