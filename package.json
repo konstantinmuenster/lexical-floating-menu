@@ -37,7 +37,8 @@
     "check": "tsc",
     "release": "yarn check && yarn build && changeset publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o .storybook/dist",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.2.6"
