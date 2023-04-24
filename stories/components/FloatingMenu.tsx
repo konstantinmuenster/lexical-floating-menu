@@ -1,7 +1,7 @@
 import { $getSelection, $isRangeSelection, FORMAT_TEXT_COMMAND } from "lexical";
 import { useEffect, useState } from "react";
 
-import { FloatingMenuProps } from "../../src";
+import { FloatingMenuComponentProps } from "../../src";
 
 import { IconButton } from "./IconButton";
 
@@ -13,7 +13,7 @@ export type FloatingMenuState = {
   isUnderline: boolean;
 };
 
-export function FloatingMenu({ editor }: FloatingMenuProps) {
+export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
   const [state, setState] = useState<FloatingMenuState>({
     isBold: false,
     isCode: false,
