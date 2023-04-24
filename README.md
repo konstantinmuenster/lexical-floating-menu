@@ -26,19 +26,26 @@ Note: Make sure you have all [peer dependencies](https://github.com/konstantinmu
 
 #### Configure
 
-`lexical-floating-menu` exports a React component that can be included as a plugin within your `LexicalComposer`.
+`lexical-floating-menu` exports a React component that can be included as a plugin within your editor.
 
 ```tsx
 import { FloatingMenuPlugin } from "lexical-floating-menu";
 import { YourFloatingMenuUI } from "../components/FloatingMenu";
 
-<LexicalComposer>
-  {/** ... other plugins (e.g. RichTextPlugin) */}
-  <FloatingMenuPlugin
-    MenuComponent={YourFloatingMenuUI}
-    element={document.body} // optional – element to which menu gets appended
-  />
-</LexicalComposer>;
+export function LexicalEditor(props: LexicalEditorProps) {
+  return (
+    <LexicalComposer initialConfig={props.config}>
+      {/** ... other plugins (e.g. RichTextPlugin) */}
+      <FloatingMenuPlugin
+        // This component represents the rendered menu. You can include any formatting
+        // options. FloatingMenuPlugin takes care of rendering it at the right position.
+        MenuComponent={YourFloatingMenuUI}
+        // optional – Define to which HTML element the menu gets appended to
+        element={document.body}
+      />
+    </LexicalComposer>
+  );
+}
 ```
 
 Take a look at the [Storybook example](https://github.com/konstantinmuenster/lexical-floating-menu/blob/main/stories/FloatingMenuPlugin.stories.ts) to see how your FloatingMenu component could look like.
