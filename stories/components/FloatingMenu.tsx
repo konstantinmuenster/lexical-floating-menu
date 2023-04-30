@@ -50,7 +50,6 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
         active={state.isBold}
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, "bold");
-          setState({ ...state, isBold: !state.isBold });
         }}
       />
       <IconButton
@@ -59,7 +58,6 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
         active={state.isItalic}
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, "italic");
-          setState({ ...state, isItalic: !state.isItalic });
         }}
       />
       <IconButton
@@ -68,7 +66,6 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
         active={state.isUnderline}
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, "underline");
-          setState({ ...state, isUnderline: !state.isUnderline });
         }}
       />
       <IconButton
@@ -77,7 +74,6 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
         active={state.isStrikethrough}
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, "strikethrough");
-          setState({ ...state, isStrikethrough: !state.isStrikethrough });
         }}
       />
       <IconButton
@@ -86,7 +82,6 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
         active={state.isCode}
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, "code");
-          setState({ ...state, isCode: !state.isCode });
         }}
       />
     </div>
