@@ -1,5 +1,5 @@
-import { $getSelection, $isRangeSelection, FORMAT_TEXT_COMMAND } from "lexical";
 import { useEffect, useState } from "react";
+import { $getSelection, $isRangeSelection, FORMAT_TEXT_COMMAND } from "lexical";
 
 import { FloatingMenuComponentProps } from "../../src";
 
@@ -23,18 +23,23 @@ export function FloatingMenu({ editor }: FloatingMenuComponentProps) {
   });
 
   useEffect(() => {
-    editor.getEditorState().read(() => {
-      const selection = $getSelection();
-      if (!$isRangeSelection(selection)) return;
+    const unregisterListener = editor.registerUpdateListener(
+      ({ editorState }) => {
+        editorState.read(() => {
+          const selection = $getSelection();
+          if (!$isRangeSelection(selection)) return;
 
-      setState({
-        isBold: selection.hasFormat("bold"),
-        isCode: selection.hasFormat("code"),
-        isItalic: selection.hasFormat("italic"),
-        isStrikethrough: selection.hasFormat("strikethrough"),
-        isUnderline: selection.hasFormat("underline"),
-      });
-    });
+          setState({
+            isBold: selection.hasFormat("bold"),
+            isCode: selection.hasFormat("code"),
+            isItalic: selection.hasFormat("italic"),
+            isStrikethrough: selection.hasFormat("strikethrough"),
+            isUnderline: selection.hasFormat("underline"),
+          });
+        });
+      }
+    );
+    return unregisterListener;
   }, [editor]);
 
   return (
