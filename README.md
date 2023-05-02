@@ -6,8 +6,6 @@ Improve your text editing experience with an intuitive floating menu / bubble me
 
 📌 Live Demo: [lexical-floating-menu.vercel.app](https://lexical-floating-menu.vercel.app/)
 
-📌 Blog Post: [How To Build A Floating Menu With Lexical and React](https://konstantin.digital/blog/how-to-build-a-floating-menu-with-lexical-react)
-
 ---
 
 <img alt="lexical floating menu" src="./screenshot.gif" width="640">
